@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+if command -v pre-commit; then pre-commit install; fi
 cd api
 poetry install
 cd ../app
