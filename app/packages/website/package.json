@@ -1,0 +1,36 @@
+{
+  "name": "@monorepo/website",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc && vite build",
+    "coverage": "vitest run --coverage",
+    "dev": "vite",
+    "lint": "eslint . --cache --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "prepare": "if command -v pre-commit; then pre-commit install; fi",
+    "prettier": "prettier -w .",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "tsc": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@monorepo/shared": "workspace:^",
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "classnames": "*",
+    "clsx": "^2.0.0",
+    "lucide-react": "^0.279.0",
+    "react": "^18.2.0",
+    "react-dom": "*",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@storybook/react": "*",
+    "@testing-library/react": "*",
+    "@types/react": "^18.2.25",
+    "jsdom": "*",
+    "vitest": "*"
+  }
+}

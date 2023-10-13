@@ -1,0 +1,77 @@
+{
+  "files.associations": {
+    "**/*.html": "html",
+    "**/templates/**/*.html": "django-html",
+    "**/templates/**/*": "django-txt",
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+  },
+  "python.defaultInterpreterPath": "./api/.venv/bin/python3",
+  "python.languageServer": "Pylance",
+  "python.formatting.provider": "none",
+  "python.formatting.blackPath": "./api/.venv/bin/black",
+  "python.formatting.blackArgs": ["--line-length", "120", "--fast"],
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.flake8Enabled": false,
+  "python.linting.pylintArgs": ["--rcfile", "./api/.pylintrc"],
+  "python.sortImports.args": ["--profile=black"],
+  "python.autoComplete.extraPaths": ["./api/"],
+  "python.analysis.extraPaths": ["./api/"],
+  "eslint.lintTask.enable": true,
+  "eslint.workingDirectories": [
+    "./app/packages/mobile",
+    "./app/packages/shared",
+    "./app/packages/webapp",
+    "./app/packages/website"
+  ],
+  "typescript.check.npmIsInstalled": true,
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.rulers": [120],
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[javascript]": {
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": ["source.fixAll"],
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": ["source.fixAll"],
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": ["source.fixAll"],
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": ["source.fixAll"],
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": ["source.fixAll"],
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "emmet.excludeLanguages": [
+    "markdown",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "python"
+  ],
+  "typescript.tsdk": "./web/node_modules/typescript/lib"
+}

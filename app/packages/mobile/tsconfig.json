@@ -1,0 +1,27 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-native",
+    "lib": ["dom", "esnext"],
+    "types": ["jest", "node"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "declaration": true
+  },
+  "files": ["../../node_modules/@nx/expo/typings/svg.d.ts"],
+  "include": [
+    ".storybook/**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "index.ts",
+    "jest.config.ts",
+    "metro.config.js",
+    "test-setup.ts"
+  ],
+  "exclude": ["node_modules", "coverage", ".expo", "android", "ios"]
+}

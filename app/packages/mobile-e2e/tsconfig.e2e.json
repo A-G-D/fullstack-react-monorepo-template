@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "sourceMap": false,
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "outDir": "../../dist/out-tsc",
+    "allowJs": true,
+    "types": ["node", "jest", "detox"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.js"]
+}

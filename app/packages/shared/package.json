@@ -1,0 +1,36 @@
+{
+  "name": "@monorepo/shared",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/shared.umd.cjs",
+  "module": "./dist/shared.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && vite build",
+    "coverage": "vitest run --coverage",
+    "dev": "vite",
+    "lint": "eslint . --cache --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "prepare": "if command -v pre-commit; then pre-commit install; fi",
+    "prettier": "prettier -w .",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "tsc": "tsc --noEmit"
+  },
+  "dependencies": {
+    "classnames": "*",
+    "react": "^18.2.0",
+    "react-dom": "*"
+  },
+  "devDependencies": {
+    "@storybook/react": "*",
+    "@testing-library/react": "*",
+    "cypress": "*",
+    "jsdom": "*",
+    "resize-observer-polyfill": "*",
+    "vite-plugin-dts": "*",
+    "vitest": "*"
+  }
+}

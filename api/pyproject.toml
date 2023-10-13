@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "backend"
+version = "0.1.0"
+description = ""
+authors = ["Aloever Dulay <aloe.dulay@bld.ai>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+django = "^4.2.5"
+django-cors-headers = "^3.13.0"
+django-environ = "^0.11.2"
+django-health-check = "^3.17.0"
+django-rest-knox = "^4.2.0"
+djangorestframework = "^3.14.0"
+psycopg2-binary = "^2.9.9"
+django-extensions = "^3.2.3"
+whitenoise = "^6.5.0"
+
+
+[tool.poetry.group.dev.dependencies]
+gunicorn = "^21.2.0"
+black = "^23.9.1"
+
+[tool.black]
+line-length = 120
+target_version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | migrations
+  # The following are specific to Black, you probably don't want those.
+  | blib2to3
+  | tests/data
+  | profiling
+)/
+'''
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
